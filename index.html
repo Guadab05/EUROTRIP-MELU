@@ -291,6 +291,11 @@ tr.extra-month td{background:linear-gradient(to right,rgba(212,184,224,.15),tran
     <div class="hero-card"><div class="hero-card-label">Me falta</div><div class="hero-card-value" id="h-falta">U$S 6.000</div></div>
     <div class="hero-card"><div class="hero-card-label">Faltan</div><div class="hero-card-value" id="h-dias">— días</div></div>
   </div>
+  <div style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem">
+    <div style="text-align:center"><div class="stat-val" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--violet-dark)">30</div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">días</div></div>
+    <div style="text-align:center"><div class="stat-val" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--violet-dark)">7</div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">ciudades</div></div>
+    <div style="text-align:center"><div class="stat-val" style="font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--violet-dark)">6</div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">países</div></div>
+  </div>
   <div style="width:100%;max-width:460px">
     <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--text-muted);margin-bottom:4px">
       <span>Progreso hacia la meta</span>
@@ -793,7 +798,7 @@ const ITINERARIO = [
   {dia:24,fecha:'13-May',pais:'Inglaterra',ciudad:'Londres',tipo:'🏛 Turismo + Fiesta',noche:true,desc:'British Museum (gratis). Covent Garden. Tate Modern. NOCHE: Shoreditch — Boxpark → XOYO o Village Underground.',aloj:'Airbnb Shoreditch / Hackney',tip:'XOYO y Village Underground: los mejores clubs de Londres. Beer gardens ya abiertos en mayo.'},
   {dia:25,fecha:'14-May',pais:'Inglaterra',ciudad:'Londres',tipo:'🎉 Día libre',noche:true,desc:'Buckingham Palace, Portobello Road Market (vintage) o excursión a Oxford. NOCHE: pub crawl por el Soho.',aloj:'Airbnb Shoreditch / Hackney',tip:'Portobello Market: sábados. Oxford: 1:30 hs en tren desde Paddington. Pub crawl: la experiencia más inglesa.'},
   {dia:26,fecha:'15-May',pais:'Inglaterra',ciudad:'Londres',tipo:'🏛 Excursión Oxford',desc:'Excursión a Oxford (1:30 hs en tren desde Paddington). Universidad medieval, Bodleian Library, Christ Church — filmada como Hogwarts. Una de las ciudades más hermosas de Inglaterra.',aloj:'Airbnb Shoreditch / Hackney',tip:'Tren desde Paddington ~£15. Vale el día entero. Volver a la tarde para cenar en Shoreditch.'},
-  {dia:27,fecha:'16-May',pais:'España',ciudad:'Barcelona',tipo:'🚆 Traslado + Shopping',vuelo:true,desc:'AVE Madrid→Barcelona (2:30 hs) o vuelo (~45 min). Tarde: El Corte Inglés Diagonal, Passeig de Gràcia.',aloj:'Airbnb Eixample / Poblenou',tip:'AVE Renfe: renfe.com desde ~€30. Poblenou: muy de moda entre jóvenes, cerca de las playas.'},
+  {dia:27,fecha:'16-May',pais:'España',ciudad:'Barcelona',tipo:'🚆 Traslado + Shopping',vuelo:true,desc:'Vuelo Londres→Barcelona (2:30 hs). Tarde: El Corte Inglés Diagonal, Passeig de Gràcia.',aloj:'Airbnb Eixample / Poblenou',tip:'Vueling/Iberia LHR→BCN desde ~€55. Poblenou: muy de moda entre jóvenes, cerca de las playas.'},
   {dia:28,fecha:'17-May',pais:'España',ciudad:'Barcelona',tipo:'🌊 Playa + Shopping + Fiesta',noche:true,desc:'Mañana: playa Bogatell (~20°C en mayo). Aperitivo en chiringuito. Tarde: últimas compras en El Born. NOCHE: Opium o La Terrrazza.',aloj:'Airbnb Eixample / Poblenou',tip:'La Terrrazza: al aire libre bajo las estrellas frente al mar. Opium: frente a la playa, perfecto para despedir el viaje.'},
   {dia:29,fecha:'18-May',pais:'España',ciudad:'Barcelona',tipo:'🛍 Último día + Tax Free',desc:'Últimas compras: El Born, souvenirs. Tramitar Tax Free en el aeropuerto El Prat. Cena de despedida.',aloj:'Airbnb Eixample / Poblenou',tip:'Tax Free BCN: mostrador cerca de los controles T1. Recuperan hasta 21% IVA de todas las compras en España.'},
   {dia:30,fecha:'19-May',pais:'✈ Vuelo',ciudad:'Barcelona → Buenos Aires',tipo:'✈ Vuelo BCN→EZE',vuelo:true,desc:'Vuelo de regreso BCN→EZE (12–14 hs con escala). 30 días de Europa en el cuerpo, la valija llena y el corazón más lleno todavía. ¡Hasta la próxima Europa!',aloj:'En avión ✈',tip:'Si el vuelo sale la tarde/noche del 19-May, la llegada a EZE es el 20-May.'},
@@ -868,10 +873,10 @@ const PPTO = {
   alojamiento:[
     {item:'Barcelona llegada (3 noches)',p1:120,p2:120,tip:'~€40/noche. Airbnb con cocina.'},
     {item:'Roma (6 noches)',p1:270,p2:270,tip:'~€45/noche. Trastevere/Pigneto con cocina.'},
-    {item:'Florencia (3 noches)',p1:120,p2:120,tip:'~€40/noche. Santo Spirito con cocina.'},
-    {item:'Venecia (3 noches)',p1:165,p2:165,tip:'~€55/noche. Dorsoduro con cocina.'},
+    {item:'Florencia (4 noches)',p1:160,p2:160,tip:'~€40/noche. Santo Spirito con cocina.'},
+    {item:'Venecia (4 noches)',p1:220,p2:220,tip:'~€55/noche. Dorsoduro con cocina.'},
     {item:'París (3 noches)',p1:150,p2:150,tip:'~€50/noche. Le Marais/Oberkampf con cocina.'},
-    {item:'Londres (4 noches)',p1:220,p2:220,tip:'~€55/noche. Shoreditch con cocina.'},
+    {item:'Londres (6 noches)',p1:330,p2:330,tip:'~€55/noche. Shoreditch con cocina.'},
     {item:'Barcelona regreso (3 noches)',p1:120,p2:120,tip:'~€40/noche. Eixample/Poblenou.'},
   ],
   comida:[
